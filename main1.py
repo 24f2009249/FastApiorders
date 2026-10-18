@@ -33,8 +33,8 @@ AUTO_INCREMENT_ID = TOTAL_ORDERS + 1
 
 
 class OrderCreate(BaseModel):
-    item: str
-    amount: float
+    item: Optional[str] = "Default Item"
+    amount: Optional[float] = 10.0
 
 
 # 1. Idempotent Order Creation
